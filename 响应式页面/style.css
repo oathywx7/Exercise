@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*::before, *::after{
+    box-sizing: border-box;
+}
+ol,ul{
+    list-style: none;
+}
+.logo{
+    text-align: center;
+    margin-top: 60px;
+}
+.logo > img{
+    display: inline-block;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+}
+.logo >.slogan{
+    margin-top: 30px;
+}
+.logo li{
+    display: inline-block;
+    min-width: 126px;
+    margin: 0 10px 24px 10px;
+    background: #d8d8d8;
+    padding: 3px;
+}
+
+.description{
+    background: #EFEFEF;
+    text-align: center;
+    padding: 32px 0 32px;
+}
+
+.description h2{
+    display: inline-block;
+    background: #ddd;
+    min-width: 200px;
+    border-radius: 12px;
+    padding: 3px 0;
+    margin: 10px 0 10px;
+}
+.description .oath2{
+    padding: 0 2em;
+    display: none;
+}
+.description .oath2 h2{
+    padding: 0 70px;
+}
+@media(min-width: 600px){
+    .description .oath1{
+        display: none;
+    }
+    .description .oath2{
+        display: block;
+    }
+}
+.description  p{
+    background: #ddd;
+    max-width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 24px;
+    border-radius: 14px;
+    margin-top: 20px;
+}
+@media(min-width:600px){
+    .description p{
+        max-width: none;
+        margin-left: 52px;
+        margin-right: 52px;
+        background: #ddd;
+        border-radius: 14px;
+    }
+}
+.product{
+    margin-left: 16px;
+    margin-right: 16px;
+}
+.product > ol{
+    margin-top: 42px;
+    
+}
+
+.product li > img{
+    width: 288px;
+    border-radius: 10px;
+    margin-top: 26px;
+}
+.product li > h3{
+    background: #ddd;
+    border-radius: 4px;
+    max-width: 204px;
+    height: 24px;
+    margin-top: 16px;
+    
+}
+.product li > p{
+    background: #EFEFEF;
+    border-radius: 4px;
+    line-height: 16px;
+    font-size: 14px;
+    margin-top: 16px;
+}
+
+
+@media(min-width:600px){
+    .product >ol{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+    }
+    .product > ol > li{
+        width: calc(50% - 16px);
+        box-sizing: border-box;
+    }
+  .project .item>img{
+      display: flex;
+      flex-grow: 1; 
+      min-width:288px; 
+  }
+}
+
+@media(min-width: 1000px){
+    .product> ol> li{
+        width: 30%;
+        box-sizing:border-box;
+    }
+}
+
+@media(min-width: 1200px){
+    .product >ol{
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+}
