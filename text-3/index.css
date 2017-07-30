@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+::before, ::after{
+    box-sizing: border-box;
+}
+body{   
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle at 50% 0, #EEEFE7, #94908D );
+}
+.line{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    margin: 0 auto;   
+    border-radius: 50%;
+    background: #EEEFEE;
+    z-index: 1;
+}
+.clock1{
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    margin: 0 auto;
+    background: #EEEFE6;   
+    margin: 0 auto;
+    border-radius: 10%; 
+    box-shadow: 0px 30px 40px #403637;  
+}
+.number{
+    position: absolute;
+    margin: 0 auto;
+    z-index: 2;
+}
+.number > span{
+    display: inline-block;
+    position: relative;
+    font-size: 20px;
+}
+.number > .twelve{
+    top: -125px;
+    right: -25px;
+}
+.number > .three{
+    top: 0px;
+    right: -125px;
+}
+.number > .six{
+    top: 125px;
+    right: 10px;
+}
+.number > .nine{
+    top: 0;
+    right: 155px;
+}
+.clock{
+    width: 300px;
+    height: 300px;
+    background: #EEEFE6;   
+    margin: 0 auto;
+    position: relative;
+    border-radius: 10%; 
+    box-shadow: 0px -5px 20px #C4BDB2 inset;
+}
+.clock > div{
+    position: absolute;     
+    top: 50%;
+    left: 150px;     
+}
+.clock > .hour-hand{
+    width: 0;
+    height: 10px;
+    left: 135px;
+    margin-top: -5px;
+    transform: rotate(-90deg);
+    transform-origin: 15px 5px;   
+    z-index: 1;
+    border-left: 75px solid #403637;
+    border-top: 2px solid transparent; 
+    border-bottom: 2px solid transparent;
+    border-radius: 0 40% 40% 0;
+    box-shadow: 2px 2px 10px  #403637; 
+    
+}
+.clock > .minute-hand{
+    width: 120px;
+    height: 8px;
+    left: 130px;
+    margin-top: -4px;
+    transform: rotate(-90deg);
+    transform-origin: 20px 4px;
+    background: #403637;
+    z-index: 2;
+    border-radius: 10% 35% 35% 10%;
+    box-shadow: 2px 2px 10px  #403637; 
+}
+.clock > .second-hand{
+    width: 130px;
+    height: 2px;
+    left: 120px;
+    margin-top: -1px;
+    transform: rotate(-90deg);
+    transform-origin: 30px 1px;
+    background: #E97B65;
+    z-index: 3;
+    box-shadow: 2px 2px 10px  #403637; 
+    
+}
+.clock > .point{
+    width: 10px;
+    height: 10px;
+    z-index: 5;
+    background: #fff;
+    left: 145px;
+    top: 145px;
+    border-radius: 50%;
+    box-shadow: 0px -2px 5px #000 inset;
+}

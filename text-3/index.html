@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./index.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="line"></div>
+    <div class="clock1"></div>
+    <div class="number">
+        <span class="twelve">12</span>
+        <span class="three">3</span>
+        <span class="six">6</span>
+        <span class="nine">9</span>
+    </div>
+    <div class="clock">
+        <div class="point"></div>       
+        <div class="hour-hand"></div>
+        <div class="minute-hand"></div>
+        <div class="second-hand"></div>
+    </div>
+</body>
+<script>
+    function step(){
+        var now = new Date()
+
+        var hours = now.getHours()
+        var minutes = now.getMinutes()
+        var seconds = now.getSeconds()
+
+        if(hours > 12){
+            hours -= 12
+        }
+
+        let secondDeg = seconds/60 *360
+        let minuteDeg = (minutes*60 + seconds)/3600 * 360
+        let hourDeg = (hours*3600 + minutes*60 + seconds)/(12 * 3600) *360
+
+        document.querySelector('.hour-hand').style.transform = `rotate(${-90+hourDeg}deg)`
+        document.querySelector('.minute-hand').style.transform = `rotate(${-90+minuteDeg}deg)`
+        document.querySelector('.second-hand').style.transform = `rotate(${-90+secondDeg}deg)`
+    }
+    step()
+    setInterval(function(){
+        step()
+    },1000)
+    
+</script>
+</html>
