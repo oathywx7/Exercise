@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+::before,::after{
+    box-sizing: border-box;
+}
+ol,ul{
+    style: none;
+}
+a{
+    text-decoration: none
+}
+
+/*topobar*/
+#topobar{
+    background: #000;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+#topobar .logo img{
+    height: 80px;
+}
+#topobar nav{
+    display: flex;
+    left: 16px;
+    align-items: center;   
+}
+#topobar nav a{
+    color: #fff;
+    padding: 0 10px;
+}
+
+.swiper-container {
+        width: 50px;
+        height: 30px;
+        margin: 20px auto;
+    }
+

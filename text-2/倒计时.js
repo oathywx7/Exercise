@@ -1,7 +1,14 @@
 var button = document.querySelector('#start')
 var total = 2 * 3600 //ms
+var limit = false
+
 button.addEventListener('click', function(){
-  var id = setInterval(function(){
+  if(limit){
+      return
+    }
+    limit = true
+    var id = setInterval(function(){
+    
     if(total <= 0){
       clearInterval(id)
     }
